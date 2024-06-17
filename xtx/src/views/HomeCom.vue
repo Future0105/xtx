@@ -38,7 +38,7 @@ export default {
   created() {
     this.$http.get('/home/index').then(value => {
       // console.log(value)
-      bus.emit('getIndex', value)
+      bus.emit('getIndex', value) 
     })
     this.$http.get('/home/hot').then(value => {
       // console.log(value)

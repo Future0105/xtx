@@ -416,7 +416,7 @@ export default {
   async created() {
     const { data: adr } = await this.$http.get('https://yjy-oss-files.oss-cn-zhangjiakou.aliyuncs.com/tuxian/area.json')
     this.address = adr
-    // console.log(this.address)
+    // console.log(this.address) 
     // })
     // console.log(this.data[0])
     // console.log(this.data)
@@ -530,6 +530,7 @@ export default {
       }
       .right-bottom {
         display: flex;
+        justify-content: space-between;
         width: 400px;
         align-items: center;
         text-align: center;

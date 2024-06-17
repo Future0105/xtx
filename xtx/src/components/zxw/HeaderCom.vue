@@ -201,53 +201,53 @@ export default {
   },
   created() {},
   mounted() {
-    // // console.log(location.hash)
-    // this.localStorage_time = setInterval(() => {
-    //   if (
-    //     localStorage.getItem('token') === null ||
-    //     !JSON.parse(localStorage.getItem('account')) ||
-    //     !localStorage.getItem('user')
-    //   ) {
-    //     localStorage.setItem('token', this.token)
-    //     localStorage.setItem('account', JSON.stringify(this.account))
-    //     localStorage.setItem('user', JSON.stringify(this.user))
-    //   }
-    //   // this.token = localStorage.getItem('token')
-    //   let token = localStorage.getItem('token')
-    //   this.account = JSON.parse(localStorage.getItem('account'))
-    //   this.user = JSON.parse(localStorage.getItem('user'))
-    //   if (!this.account.find(item => item.name === token)) {
-    //     if (location.hash !== '#/login/1' && location.hash !== '#/login/2') {
-    //       const car = document.querySelector('.car')
-    //       car.style.opacity = 0
-    //     }
-    //     if (token === '') {
-    //       token = this.token
-    //     } else {
-    //       token = this.token
-    //       localStorage.setItem('token', this.token)
-    //     }
-    //   } else {
-    //     this.token = token
-    //     // console.log(this.token)
-    //     this.myCar = this.account.find(item => item.name === this.token).cart
-    //     let num = 0
-    //     let price = 0
-    //     this.myCar.forEach(function (currentValue) {
-    //       num += currentValue.num
-    //       price += currentValue.price * currentValue.num
-    //     })
-    //     this.carNum = num
-    //     if (this.carNum === 0 || location.hash === '#/cart') {
-    //       const car = document.querySelector('.car')
-    //       car.style.opacity = 0
-    //     } else {
-    //       const car = document.querySelector('.car')
-    //       car.style.opacity = 1
-    //     }
-    //     this.carPrice = price.toFixed(2)
-    //   }
-    // }, 10)
+    // console.log(location.hash)
+    this.localStorage_time = setInterval(() => {
+      if (
+        localStorage.getItem('token') === null ||
+        !JSON.parse(localStorage.getItem('account')) ||
+        !localStorage.getItem('user')
+      ) {
+        localStorage.setItem('token', this.token)
+        localStorage.setItem('account', JSON.stringify(this.account))
+        localStorage.setItem('user', JSON.stringify(this.user))
+      }
+      // this.token = localStorage.getItem('token')
+      let token = localStorage.getItem('token')
+      this.account = JSON.parse(localStorage.getItem('account'))
+      this.user = JSON.parse(localStorage.getItem('user'))
+      if (!this.account.find(item => item.name === token)) {
+        if (location.hash !== '#/login/1' && location.hash !== '#/login/2') {
+          const car = document.querySelector('.car')
+          car.style.opacity = 0
+        }
+        if (token === '') {
+          token = this.token
+        } else {
+          token = this.token
+          localStorage.setItem('token', this.token)
+        }
+      } else {
+        this.token = token
+        // console.log(this.token)
+        this.myCar = this.account.find(item => item.name === this.token).cart
+        let num = 0
+        let price = 0
+        this.myCar.forEach(function (currentValue) {
+          num += currentValue.num
+          price += currentValue.price * currentValue.num
+        })
+        this.carNum = num
+        if (this.carNum === 0 || location.hash === '#/cart') {
+          const car = document.querySelector('.car')
+          car.style.opacity = 0
+        } else {
+          const car = document.querySelector('.car')
+          car.style.opacity = 1
+        }
+        this.carPrice = price.toFixed(2)
+      }
+    }, 10)
   },
   updated() {}
 }
