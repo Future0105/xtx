@@ -268,17 +268,20 @@ export default {
     align-items: center;
     justify-content: space-between;
     .pic {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 200px;
       height: 100%;
+
       a {
         display: block;
-        width: 100%;
+        width: 130px;
         height: 100%;
         text-align: center;
         background-image: url(../../../public/img/logo.png);
         background-size: contain;
         background-repeat: no-repeat;
-        background-position: 0 18px;
       }
     }
     .list {
